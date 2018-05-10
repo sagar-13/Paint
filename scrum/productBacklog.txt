@@ -1,0 +1,497 @@
+# User Stories/Bugs (add as appropriate), modify at each Sprint Planning Meeting
+# If a USER STORY is large, break it into smaller user stories.
+# For example, the color chooser user story involves: 
+# 1 Color chooser UI (which could be a USER STORY)
+# 2 Implementation of selected color into the drawing stream.
+
+
+# COMPLETED USER STORIES/BUGS BELOW ###########################################
+
+--------------------------------------------------------------------------
+TYPE     : USER STORY 1
+NAME     : Draw Circle
+OWNER    : Kaveh 
+PRIORITY : 1 
+ESTIMATE : 2
+AS A     : user
+I WANT   : To click the center of the circle, drag, and release to specify
+           a circle to be drawn in the current style.
+SO THAT  : I can add circles to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 2
+NAME     : Draw Circle Feedback
+OWNER    : Kaveh 
+PRIORITY : 2 
+ESTIMATE : 2
+AS A     : user
+I WANT   : As a user is specifying a Circle, during the drag, a 'current'
+           circle should be on display. As the user drags, the 'current'
+           circle changes in real time so that a circle is drawn with
+           centre at users initial circle click, with radius out to
+           the current dragged mouse position.
+SO THAT  : I can see the circle I am about to build on release of the mouse
+           button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 6
+NAME     : Circle drawing is broken
+OWNER    : Kaveh 
+PRIORITY : 3
+ESTIMATE : 2
+ISSUE    : The first click should specify the center of the circle, with
+           a drag for the radius. This is not the case in the current
+           implementation.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 3
+NAME     : Draw Rectangle
+OWNER    : Kaveh 
+PRIORITY : 4
+ESTIMATE : 3
+AS A     : user
+I WANT   : To click on one corner of a rectangle, drag, and release to 
+		   specify two corners of a rectangle to be drawn in the current style.
+SO THAT  : I can add rectangles to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 4
+NAME     : Draw Rectangle Feedback
+OWNER    : Kaveh 
+PRIORITY : 5
+ESTIMATE : 3
+AS A     : user
+I WANT   : Similarly to Draw Circle Feedback, display the rectangle in mid construction.
+SO THAT  : I can see the rectangle I am about to build on release of the mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2
+NAME     : Drawing selection mode not indicated
+OWNER    : Sagar 
+PRIORITY : 10
+ESTIMATE : 1 
+ISSUE    : Currently ,you can't tell which mode "Circle", "Rectangle", ...
+           is currently selected. Is JButton correct, is there a way
+           to highlight the currently selected mode?
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 5
+NAME     : Color selector
+OWNER    : Ryan 
+PRIORITY : 6
+ESTIMATE : 3
+AS A     : user
+I WANT   : To be able to select the current drawing color, to be applied
+           to subsequent shapes. Example: 
+           		selects color red 
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select color green
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two red circles and a red rectangle as well as
+           	two green rectangles and a green squiggle
+SO THAT  : To use a varierty of combinations of colours and paint modes.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 1
+NAME     : Icons instead of text for drawing mode selection
+OWNER    : Ryan 
+PRIORITY : 7
+ESTIMATE : 3
+ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 8
+NAME     : Draw Square/Draw Square Feedback
+OWNER    : Kaveh 
+PRIORITY : 9
+ESTIMATE : 3
+AS A     : user
+I WANT   : To click on one corner of a square drag, and release to 
+		   specify two corners of a square to be drawn in the current style.
+		   I also want the display of the square mid construction.
+SO THAT  : I can add squares to my canvas and see the square I am about to
+		   build on release of my mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 4
+NAME     : Architecture behind Model is poor
+OWNER    : Eugene 
+PRIORITY : 11
+ESTIMATE : 2
+ISSUE    : Having a list of different types of drawable things in the
+           model is cumbersome. In fact, it is currently incorrect, with
+           Squiggle's not drawing properly. Need to re-architect the Model
+           so that it is more flexible, and easier to work with.
+           Consider some design patterns, or change of responsibility
+           here.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 5
+NAME     : Squiggle is broken
+OWNER    : Eugene 
+PRIORITY : 8
+ESTIMATE : 1
+ISSUE    : Squiggles are connected to each other by a straight line. Each drag
+		   of the mouse should be a separate squiggle. Possibly
+           the issue is with the representation of the squiggles in the Model.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 6
+NAME     : Fill style selector
+OWNER    : Ryan  & Eugene 
+PRIORITY : 12
+ESTIMATE : 4
+AS A     : user
+I WANT   : To be able to select the current drawing style (filled or outline), to be applied
+           to subsequent shapes. Example: 
+           		selects fill style solid
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select fill style outline
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two solid circles and a solid rectangle as well as
+           	two outlined rectangles and a squiggle
+SO THAT  : I can choose to use a varierty of combinations of colours,
+		   and paint modes filled, or outlined.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 9
+NAME     : Draw Polyline/Draw Polyline Feedback
+OWNER    : Eugene 
+PRIORITY : 13
+ESTIMATE : 3
+AS A     : user
+I WANT   : I want to draw polylines with each click as a point
+SO THAT  : I can add polylines to my canvas and see the polyline I am about to
+		   build on release of my mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 7
+NAME     : Line thickness selector
+OWNER    : Sagar 	
+PRIORITY : 14
+ESTIMATE : 3 
+AS A     : user
+I WANT   : To be able to select the current line thickness, to be applied
+           to subsequent shapes. Example:
+           		select fill style outline 
+           		selects line thickness 1
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select line thickness 9
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two thinly outlined circles and a thinly outlined 
+           	rectangle as well as two thickly outlined rectangles and a thick squiggle
+SO THAT  : I can draw shapes of various thicknesses.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 3
+NAME     : Architecture behind choosing selection mode is poor
+OWNER    : Sagar  and Kaveh 
+PRIORITY : 15
+ESTIMATE : 7
+ISSUE    : Code is not modular and is difficult to expand. Need a better
+           architecture behind selecting a drawing mode, and handling
+           the drawing events. Consider some design patterns here.
+           Refactor ShapeChooserPanel and PaintPanel to get rid of the
+           'if' blocks in the PaintPanel mouse event code.
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+TYPE     : BUG 2.1
+NAME     : Architecture for drawing shapes can be improved
+OWNER    : Kaveh 
+PRIORITY : 16
+ESTIMATE : 2
+ISSUE    : The architecture can be improved if we implement the Command Design 
+Pattern to draw shapes as follows:
+
+The PaintModel should use the command design pattern. 
+That is, each shape knows how to draw itself, so there is a single list of 
+DrawingCommands maintained by the PaintModel and used by the PaintPanel.
+paintComponent simply asks the PaintModel to ask command to execute(g2d).
+The simplest way to make this happen is to make each shape implement the 
+DrawingCommand interface which requires execute(g2d) to be implemented.
+Well sort of.
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : User Story 10
+NAME     : Draw Ellipse/Draw Ellipse Feedback 
+OWNER    : Kaveh 
+PRIORITY : 22
+ESTIMATE : 2
+AS A     : user
+I WANT   : To click a point on the radius of an ellipse, drag, and 
+		   release to specify an ellipse to be drawn in the current style.
+SO THAT  : I can add ellipses to my canvas and see the ellipse I am about 
+		   to build on release of my mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2.5
+NAME     : Move non src files from src directory
+OWNER    : Ryan 
+PRIORITY : 21
+ESTIMATE : 1
+ISSUE    : ANoteOnGit.txt members.txt scrum and other non-src files/folders
+should appear in repo_[GROUP]/Assignment2, not in 
+repo_[GROUP]/Assignment2/src causing copies to be sent to
+repo_[GROUP]/Assignment2/bin/ and subsequent issues
+with git pulling and merging.
+RESOLVE  : Move above files and directories, add to index, commit
+and push.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2.6
+NAME     : Git repo has incorrect .gitignore
+OWNER    : Ryan 
+PRIORITY : 20
+ESTIMATE : 1
+ISSUE    : Modifications to src files leads to changes to .class files
+in repo_[GROUP]/Assignment2/bin/. These changes lead to, if commited,
+potential conflicts. To fix this, on the master branch, add a .gitignore to 
+repo_[GROUP]/Assignment2/ or repo_[GROUP]/. The contents of .gitignore
+could be, for example,
+
+/bin/
+
+You will need to add the .gitignore to index, commit and push it.
+Unfortunately, this is not the end of the issue though, once git starts
+tracking a file, it continues tracking it. To fix this, delete the .class
+files (and any other files of interest) from the bin directory. Add this
+change to index, commit and push. 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2.4
+NAME     : Architecture behind creating shape instances is poor
+OWNER    : Sagar 
+PRIORITY : 17
+ESTIMATE : 4
+ISSUE    : A better architecture for creating shape instances so that it is 
+more flexible, and easier to work with can be created using the Strategy Design 
+pattern as follows:
+
+Create class/abstract class/interface  ShapeManipulatorStrategy as well 
+as subclasses/implementators for each type of Shape. Call these the
+concrete ShapeNamipulatorStrategies
+
+The concrete ShapeManipulatorStrategies are responsible for 
+
+1. Creating instances of Shape and putting them on top of 
+   the PaintModel command stack.
+
+2. Understanding how mouse events modify the shape at the top of the 
+   PaintModel command stack.
+
+3. Calling the PaintPanel repaint at appropriate times.
+
+This strategy can be put in place either by having PaintPanel's mouse 
+events forwarded through PaintPanel into the current strategy, or by 
+simply switching the PaintPanel's listeners as appropriate.
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2.3
+NAME     : Architecture behind choosing drawing mode is poor
+OWNER    : Sagar 
+PRIORITY : 18
+ESTIMATE : 2
+ISSUE    : A better architecture behind selecting a drawing mode can be created 
+by implementing the Factory Design Pattern as follows:
+
+The factory design pattern should be used by the paint buttons. 
+The factory is responsible for creating different ShapeManipulatorStrategy 
+instances (see BUG 2.4). That is, when a button is pressed, the appropriate 
+ShapeManipulatorStrategy is created and installed in the PaintPanel. 
+Note that you can associate text with a button, even if you 
+display an ImageIcon. The string attached to the button causes the right choice 
+of object creation.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 12
+NAME     : Line
+OWNER    : Eugene 
+PRIORITY : 24
+ESTIMATE : 1
+AS A     : user
+I WANT   : To be able to draw lines to the canvas.
+SO THAT  : I can add lines to my canvas and see the line I am about to
+		   build on release of my mouse button
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 13
+NAME     : Color Panel directly on GUI
+OWNER    : Eugene 
+PRIORITY : 25
+ESTIMATE : 3
+AS A     : user
+I WANT   : To be able to choose from preset colors.
+SO THAT  : Draw with different colours more easily.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 11
+NAME     : Undo/Redo
+OWNER    : Kaveh  & Eugene 
+PRIORITY : 23
+ESTIMATE : 3
+AS A     : user
+I WANT   : To be able to undo/redo changes to the canvas.
+SO THAT  : I can fix any changes that are mistakes, or redo those changes
+		   if they are not mistakes.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 16
+NAME     : New Canvas
+OWNER    : Kaveh  & Eugene 
+PRIORITY : 28
+ESTIMATE : 2
+AS A     : user
+I WANT   : To be able to start a new my canvas.
+SO THAT  : I can start fresh.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2.2 (ALTERNATE)
+NAME     : Architecture for handling shape modifiers can be improved 
+OWNER    : Kaveh 
+PRIORITY : 19
+ESTIMATE : 3
+ISSUE    : The architecture can be improved if we implement the Command Design 
+Pattern to handle changes to the graphics contex such as changing drawing 
+color, stroke width etc. Implemented using the alternate design pattern.
+Shapes hold their own color/fill/stroke attributes so that when they are
+drawn the graphics knows what color/fill/stroke to use by getting the
+attributes from the Shapes.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 17
+NAME     : Eraser
+OWNER    : Eugene 
+PRIORITY : 29
+ESTIMATE : 1
+AS A     : user
+I WANT   : To be able to erase my mistakes.
+SO THAT  : I can erase my mistakes.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 18
+NAME     : Change Background Colour
+OWNER    : Eugene 
+PRIORITY : 30
+ESTIMATE : 1
+AS A     : user
+I WANT   : To be able to change the background colour of my canvas
+SO THAT  : I can change the background.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 15
+NAME     : Transparent Shapes
+OWNER    : Sagar 
+PRIORITY : 27
+ESTIMATE : 4
+AS A     : user
+I WANT   : To be able to have transparency in colours.
+SO THAT  : I can use transparency in my art work.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 8
+NAME     : Cannot undo a cut
+OWNER    : Eugene 
+PRIORITY : 31
+ESTIMATE : 3
+ISSUE    : Cannot undo a cut, need to re-add everything the cut has taken away
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 9
+NAME     : Cannot redo/undo a paste with multiple Shapes
+OWNER    : Eugene 
+PRIORITY : 32
+ESTIMATE : 3
+ISSUE    : Undoing a paste with multiple shapes only undoes one shape, need
+		   to undo all of the shapes pasted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 10
+NAME     : Cannot redo an undone cut
+OWNER    : Eugene 
+PRIORITY : 37
+ESTIMATE : 1
+ISSUE    : Cannot redo an undone cut, will throw an error.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 14
+NAME     : Selection Copy
+OWNER    : Kaveh 
+PRIORITY : 26
+ESTIMATE : 4
+AS A     : user
+I WANT   : To be able to cut/copy shapes on the canvas and paste them 
+		   elsewhere.
+SO THAT  : I can duplicate shapes easily.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 21
+NAME     : Draw Spray Paint
+OWNER    : Ryan 
+PRIORITY : 34
+ESTIMATE : 4
+I WANT   : To be able to use spray paint on my canvas.
+SO THAT  : I can use spray paint in my art.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 22
+NAME     : Draw Triangles
+OWNER    : Ryan 
+PRIORITY : 35
+ESTIMATE : 4
+I WANT   : To be able to use triangles on my canvas.
+SO THAT  : I can use triangles in my art.
+--------------------------------------------------------------------------
+
+# OMITTED USER STORIES/BUGS BELOW   ###########################################
+--------------------------------------------------------------------------
+TYPE     : USER STORY 23
+NAME     : Draw Fill
+OWNER    : Eugene  & Kaveh 
+PRIORITY : 38
+ESTIMATE : 4
+I WANT   : To be able to fill on my canvas.
+SO THAT  : I can use fill stuff.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 20
+NAME     : Change Font
+OWNER    : Ryan 
+PRIORITY : 36
+ESTIMATE : 4
+I WANT   : To be able to change my font for the text I want to add to 
+		   my canvas.
+SO THAT  : I can use different font styles in my art.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 19
+NAME     : Draw Text
+OWNER    : Ryan 
+PRIORITY : 33
+ESTIMATE : 4
+I WANT   : To be able to add text to my canvas.
+SO THAT  : I can use text within my art.
+--------------------------------------------------------------------------

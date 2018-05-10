@@ -1,0 +1,101 @@
+# Fill in, commit and push each day.
+# Group Member: Sagar Suri (Scrum Master)
+Nov 2, 2016
+	Yesterday :
+	Today     :
+	Obstacles :
+	
+Nov 3, 2016
+	Yesterday :
+	Today     :
+	Obstacles :
+
+Nov 4, 2016
+	Yesterday :
+	Today     : Familiarized self with assignment and got started
+				on user story 7. 
+	Obstacles : Making thickness slider non-universal. 
+
+Nov 5, 2016
+	Yesterday : Got a thickness combo box which changed the thickness
+				of all shapes on the canvas at once.
+	Today     : Implemented a JSlider instead of a JComboBox
+				for changing the thickness. Got the thickness
+				changer to work properly for circles only.
+				Also, fixed Bug2. Button selection is working.
+	Obstacles : Lots of git issues today. Multiple users working on the
+				same branch by accident caused some issues.
+
+Nov 6, 2016
+	Yesterday : Decided to complete UserStory 7 after some merges in the 
+				future since it would be easier to implement for the rest 
+				of the shapes that way.
+	Today     : Organized product backlog a bit. Brain-stormed about
+				bug 3 design pattern but ultimately was not able to get
+				anything significant done.
+	
+Nov 7, 2016
+	Yesterday :
+	Today     : Brainstorming design patterns.
+	Obstacles :
+	
+Nov 8, 2016
+	Yesterday :
+	Today     : Merged Bug 2 and UserStory7 into master. Implemented thickness
+				for all shapes. Attempted implementing command design pattern.
+				Result was very buggy. Started from scratch and went for second
+				attempt. 
+	Obstacles : Broken shape drawing functionality when implementing pattern.
+	
+Nov 9, 2016
+	Yesterday :
+	Today     : Implemented a command design pattern and finished Bug03.
+				Also, made many improvements to the code. Merged Bug03 into
+				the master. Implemented HashMap to remove if blocks in 
+				ShapeChooserPanel. A little bit of documentation also done.
+	Obstacles : Lots of git issues when merging. Broke
+				a lot of functionality in the process which had to be 
+				re-implemented in order to work with the new design pattern.
+				(Colour, fill, thickness, etc)
+
+
+Part 2:
+
+Nov 12, 2016
+	Yesterday : Read over assignment and tried to figure out what is done already.
+	Today     : Starting on Bug 2.4 and 2.3. Converting previous command design 
+				pattern to strategy and making Factory for the shape making.
+	Obstacles : 
+	
+Nov 13, 2016
+	Yesterday : Finished Bug2.3 and Bug2.4. 
+	Today     : Think of ideas for extra functionality. Try implementing 
+				transparency and selection copy. Organized product and sprint
+				backlog in accordance with the current progress.
+	Obstacles :
+	
+Nov 14, 2016
+	Yesterday : Implemented transparency JSlider in UserStory15.
+	Today     : Merge to master.
+	Obstacles : Many problems occurred because many merges to master 
+				happened today. Spent a lot of time fixing broken
+				functionality from merging mistakes.
+	
+Nov 15, 2016
+	Yesterday : Merged transparency slider. 
+	Today     : Fixed up appearance a bit and added comments.
+				Removed unused imports, implemented FillableShape
+				to prevent shapes from having attributes they don't 
+				use. Fixed up constructors and documentation
+				accordingly.
+	Obstacles :
+	
+Nov 16, 2016
+	Yesterday : All of the planned stuff was accomplished.
+	Today     : Gave thickness it's own panel and moved it to a convenient
+				location. Changed the way every class accesses it. Added 
+				ToggleButtons instead of disabling selected buttons for 
+				shape chooser panel. Made sure scrum documents were organized.
+	Obstacles : 
+	
+	
