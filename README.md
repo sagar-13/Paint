@@ -1,6 +1,7 @@
 # Paint
 
-A blank canvas for painting with various tools available. 
+A blank canvas for painting with various tools available. It was built with a team of 4 and managed using SCRUM.
+It also features multiple software design patterns.
 
 <img width="864" alt="screen shot 2018-05-14 at 3 03 56 pm" src="https://user-images.githubusercontent.com/38898536/40017720-30a02ed2-5788-11e8-87ad-ff25cf85cc86.png">
 <img width="871" alt="screen shot 2018-05-14 at 3 04 05 pm" src="https://user-images.githubusercontent.com/38898536/40017723-324a20e4-5788-11e8-9da4-deef71ef0ce3.png">
